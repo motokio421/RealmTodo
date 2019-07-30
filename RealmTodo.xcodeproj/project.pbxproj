@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,8 @@
 		7D8874CD22EFEB77004D5415 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D8874CB22EFEB77004D5415 /* Main.storyboard */; };
 		7D8874CF22EFEB79004D5415 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D8874CE22EFEB79004D5415 /* Assets.xcassets */; };
 		7D8874D222EFEB79004D5415 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D8874D022EFEB79004D5415 /* LaunchScreen.storyboard */; };
+		7DE8862422EFF09F0082B2C2 /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE8862322EFF09F0082B2C2 /* InputViewController.swift */; };
+		7DE8862622EFF0DB0082B2C2 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE8862522EFF0DB0082B2C2 /* Todo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		7D8874CE22EFEB79004D5415 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D8874D122EFEB79004D5415 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7D8874D322EFEB79004D5415 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7DE8862322EFF09F0082B2C2 /* InputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
+		7DE8862522EFF0DB0082B2C2 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		8F44EEC802AF1B56302C0F36 /* Pods-RealmTodo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmTodo.debug.xcconfig"; path = "Target Support Files/Pods-RealmTodo/Pods-RealmTodo.debug.xcconfig"; sourceTree = "<group>"; };
 		A77F5857E934F98588834807 /* Pods_RealmTodo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RealmTodo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -46,7 +50,6 @@
 				8F44EEC802AF1B56302C0F36 /* Pods-RealmTodo.debug.xcconfig */,
 				02A25EA8AB2BD72A05D89241 /* Pods-RealmTodo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -71,14 +74,32 @@
 		7D8874C622EFEB77004D5415 /* RealmTodo */ = {
 			isa = PBXGroup;
 			children = (
+				7DE8862822EFF1790082B2C2 /* Objects */,
+				7DE8862722EFF13C0082B2C2 /* Controllers */,
 				7D8874C722EFEB77004D5415 /* AppDelegate.swift */,
-				7D8874C922EFEB77004D5415 /* ViewController.swift */,
 				7D8874CB22EFEB77004D5415 /* Main.storyboard */,
 				7D8874CE22EFEB79004D5415 /* Assets.xcassets */,
 				7D8874D022EFEB79004D5415 /* LaunchScreen.storyboard */,
 				7D8874D322EFEB79004D5415 /* Info.plist */,
 			);
 			path = RealmTodo;
+			sourceTree = "<group>";
+		};
+		7DE8862722EFF13C0082B2C2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7DE8862322EFF09F0082B2C2 /* InputViewController.swift */,
+				7D8874C922EFEB77004D5415 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		7DE8862822EFF1790082B2C2 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				7DE8862522EFF0DB0082B2C2 /* Todo.swift */,
+			);
+			path = Objects;
 			sourceTree = "<group>";
 		};
 		AC2D2D18BBFF53C5730AEDFD /* Frameworks */ = {
@@ -204,8 +225,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DE8862422EFF09F0082B2C2 /* InputViewController.swift in Sources */,
 				7D8874CA22EFEB77004D5415 /* ViewController.swift in Sources */,
 				7D8874C822EFEB77004D5415 /* AppDelegate.swift in Sources */,
+				7DE8862622EFF0DB0082B2C2 /* Todo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
