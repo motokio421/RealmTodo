@@ -6,4 +6,16 @@
 //  Copyright © 2019 比嘉幹樹. All rights reserved.
 //
 
-import Foundation
+import RealmSwift
+
+class Todo: Object{
+//    ID登録
+    @objc dynamic var id: Int = 0
+  
+//    タイトル
+    @objc dynamic var title: String = ""
+
+//    登録日時
+   @objc dynamic var date: Date = Date()
+    
+}
