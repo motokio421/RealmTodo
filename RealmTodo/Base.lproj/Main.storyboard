@@ -79,11 +79,17 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="didClickButton:" destination="IFG-DW-DCm" eventType="touchUpInside" id="k14-fg-zMh"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="8XC-76-xKu"/>
                     </view>
+                    <connections>
+                        <outlet property="textField" destination="ZXx-mM-Nwz" id="zwX-Xt-2x5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VPF-Py-Sdk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -105,7 +111,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="57X-Ny-bhD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="306" y="92"/>
+            <point key="canvasLocation" x="90" y="92"/>
         </scene>
     </scenes>
 </document>
