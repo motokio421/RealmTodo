@@ -13,12 +13,33 @@ class InputViewController: UIViewController {
     
     @IBOutlet weak var textField: UITextField!
     
+    @IBOutlet weak var button: UIButton!
     //前の画面から渡されてきたTODOを受け取る変数
     var todo: Todo? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        if todo == nil {
+            //新規追加
+             button.setTitle("追加",for: .normal)
+        } else {
+            //更新の場合
+              button.setTitle("更新",for: .normal)
+        }
+        
+        if todo != nil {
+            //編集の場合
+            button.setTitle("追加",for: .normal)
+            textField.text = todo!.title
+        }
+        
+    }
+    
     
     fileprivate func createNewTodo(_ text: String) {
         // Realmに接続
@@ -39,6 +60,15 @@ class InputViewController: UIViewController {
         }
     }
     
+    fileprivate func updateTodo(_ text: String) {
+        //更新
+        let realm = try! Realm()
+        
+        try! realm.write {
+            todo?.title = text
+        }
+    }
+    
     @IBAction func didClickButton(_ sender: UIButton) {
         
         // nilかチェックをする
@@ -54,8 +84,14 @@ class InputViewController: UIViewController {
             return
         }
         
-//        新規タスクを追加
-        createNewTodo(text)
+        if todo == nil {
+            //  新規タスクを追加
+            createNewTodo(text)
+        } else {
+            updateTodo(text)
+        }
+        
+
         
 //        前の画面に戻る
         navigationController?.popViewController(animated :true)

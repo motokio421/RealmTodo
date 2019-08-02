@@ -22,6 +22,7 @@ class ViewController: UIViewController {
         
         //  TODoの一覧を取得
         todos = realm.objects(Todo.self).reversed()
+        // 表示
         tableView.reloadData()
     }
     
